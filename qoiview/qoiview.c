@@ -172,17 +172,13 @@ int main(int argc, char *argv[])
 
     if(strcmp(imagePath, "-") == 0)
     {
-        // Use stdin
-        if (loadPngFile(&(imageLayer.image), stdin) == false)
-        {
-            fprintf(stderr, "unable to load %s\n", imagePath);
+            fprintf(stderr, "input from stdin is currently not supported");
             exit(EXIT_FAILURE);
-        }
     }
     else
     {
         // Load image from path
-        if (loadPng(&(imageLayer.image), imagePath) == false)
+        if (loadQoi(&(imageLayer.image), imagePath) == false)
         {
             fprintf(stderr, "unable to load %s\n", imagePath);
             exit(EXIT_FAILURE);

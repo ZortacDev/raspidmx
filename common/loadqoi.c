@@ -43,32 +43,12 @@
 //-------------------------------------------------------------------------
 
 bool
-loadPng(
+loadQoi(
         IMAGE_T* image,
         const char *path)
 {
-    FILE* file = fopen(path, "rb");
-
-    if (file == NULL)
-    {
-        fprintf(stderr, "loadpng: can't open file for reading\n");
-        return false;
-    }
-
-    bool result = loadPngFile(image, file);
-
-    fclose(file);
-
-    return result;
-}
-
-bool
-loadPngFile(
-        IMAGE_T* image,
-        FILE *file)
-{
     qoi_desc image_info;
-    void* pixel_data = qoi_read(file, &image_info, 0);
+    void* pixel_data = qoi_read(path, &image_info, 0);
 
     if (pixel_data == NULL)
     {

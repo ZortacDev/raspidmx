@@ -35,8 +35,7 @@
 
 //-------------------------------------------------------------------------
 
-bool loadPng(IMAGE_T *image, const char *path);
-bool loadPngFile(IMAGE_T* image, FILE *file);
+bool loadQoi(IMAGE_T *image, const char *path);
 
 //-------------------------------------------------------------------------
 
