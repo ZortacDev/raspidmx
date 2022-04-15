@@ -32,6 +32,7 @@
 
 #include "loadqoi.h"
 
+#define QOI_IMPLEMENTATION
 #include "qoi.h"
 
 //-------------------------------------------------------------------------
