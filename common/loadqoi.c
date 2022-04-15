@@ -57,6 +57,8 @@ loadQoi(
     }
 
 
+
+
     //---------------------------------------------------------------------
 
     VC_IMAGE_TYPE_T type = VC_IMAGE_RGB888;
@@ -71,6 +73,9 @@ loadQoi(
               image_info.width,
               image_info.height,
               false);
+
+
+    printf("QOI Bytes: %i, Image Buffer Bytes: %i\r\n", image_info.height * image_info.width * image_info.channels, image->size);
 
     memcpy(image->buffer, pixel_data, image->size);
     free(pixel_data);
