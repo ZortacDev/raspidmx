@@ -75,7 +75,7 @@ loadQoi(
               false);
 
 
-    printf("QOI Bytes: %i, Image Buffer Bytes: %i\r\n", image_info.height * image_info.width * image_info.channels, image->size);
+    printf("QOI Bytes: %u, Image Buffer Bytes: %u\r\n", (unsigned int)(image_info.height * image_info.width * image_info.channels), (unsigned int) image->size);
 
     memcpy(image->buffer, pixel_data, image->size);
     free(pixel_data);
